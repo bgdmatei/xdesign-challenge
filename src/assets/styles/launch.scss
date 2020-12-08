@@ -21,3 +21,21 @@
     text-align: end;
   }
 }
+
+.filter-btns {
+  display: flex;
+  justify-content: flex-end;
+  div {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin: 8px;
+    padding: 8px 16px;
+    background-color: #1f5184;
+    img {
+      margin: 2px 0px 0px 10px;
+      width: 12px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+nav {
+  min-height: 10vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border: 1px solid black;
+  .logo-container {
+    margin-left: 5%;
+    img {
+      height: 100%;
+      width: 20%;
+    }
+    span {
+      text-transform: uppercase;
+      font-size: 30px;
+    }
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 16px;
+    background-color: #1f5184;
+    color: #fff;
+    border-radius: 24px 0 0 24px;
+    text-decoration: none;
+    img {
+      margin: 8px 0 0 8px;
+      width: 16px;
+    }
+  }
+}

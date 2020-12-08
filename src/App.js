@@ -1,9 +1,14 @@
 import './App.css';
+import Nav from './components/Nav';
+import LaunchesScreen from './screens/LaunchesScreen';
 
 function App() {
   return (
     <>
-      <h1>Hi</h1>
+      <main>
+        <Nav />
+        <LaunchesScreen />
+      </main>
     </>
   );
 }

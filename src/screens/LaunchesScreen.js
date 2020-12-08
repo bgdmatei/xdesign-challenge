@@ -7,7 +7,7 @@ import '../assets/styles/launches.scss';
 const LaunchesScreen = () => {
   const [launches, setLaunches] = useState([]);
 
-  const API = 'https://api.spacexdata.com/v4/launches/latest';
+  const API = 'https://api.spacexdata.com/v3/launches';
 
   useEffect(() => {
     axios

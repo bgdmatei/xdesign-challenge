@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 import Launch from '../components/Launch';
 import Loader from '../components/Loader';
@@ -25,7 +25,7 @@ const LaunchesScreen = ({ launches, setLaunches, loading, setLoading }) => {
         <section className='launches'>
           <div className='launches-info'>
             <img src={LaunchHome} alt='Rocket launching' />
-            <Launch launches={launches} />
+            <Launch launches={launches} setLaunches={setLaunches} />
           </div>
         </section>
       )}

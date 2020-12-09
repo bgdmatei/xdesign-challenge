@@ -10,7 +10,6 @@ const Nav = ({ setLaunches, setLoading }) => {
     setLoading(true);
     const result = await axios.get(API);
     setLaunches(result.data);
-    console.log(result.data);
     setLoading(false);
   };
 

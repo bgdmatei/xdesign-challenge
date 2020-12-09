@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import Logo from '../assets/images/spacex-logo.png';
 import Refresh from '../assets/images/refresh@3x.png';

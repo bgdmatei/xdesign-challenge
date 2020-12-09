@@ -32,7 +32,12 @@
     color: #fff;
     margin: 8px;
     padding: 8px 16px;
-    background-color: #1f5184;
+    background-color: $primary;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+      background-color: $hover;
+    }
     img {
       margin: 2px 0px 0px 10px;
       width: 12px;

@@ -1,0 +1,22 @@
+$primary: #1f5184;
+$hover: #3f78b3;
+
+@font-face {
+  font-family: 'BrandonGrotesque';
+  src: url('../fonts/BrandonGrotesque-Regular.woff');
+}
+
+@import './launch';
+@import './launches';
+@import './nav';
+@import './loader';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: BrandonGrotesque;
+}

@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
-import '../assets/styles/launch.scss';
 import Select from '../assets/images/select@2x.png';
 import Sort from '../assets/images/sort@2x.png';
 
-const Launch = ({ launches }) => {
+const Launch = ({ launches, setLaunches }) => {
+  const [order, setOrder] = useState(false);
+  const [sortedLaunches, setSortedLaunches] = useState([]);
+
+  const sortbyDate = () => {
+    const reversedLaunches = [...launches].reverse();
+    let reversedSort = [];
+
+    if (sortedLaunches.length) {
+      reversedSort = sortedLaunches.reverse();
+    }
+
+    setLaunches(reversedLaunches);
+    setSortedLaunches(reversedSort);
+    setOrder(!order);
+  };
+
   return (
     <>
       <div className='launch-list'>
@@ -16,7 +31,7 @@ const Launch = ({ launches }) => {
               <img src={Select} alt='' />{' '}
             </span>
           </div>
-          <div>
+          <div onClick={sortbyDate}>
             <p>Sort Descending</p>{' '}
             <span>
               <img src={Sort} alt='' />{' '}
@@ -26,7 +41,7 @@ const Launch = ({ launches }) => {
         {launches.map((launch, i) => (
           <div className='launch-item' key={i}>
             <div className='launch-name'>
-              <p>#{i + 1}</p>
+              <p>#{launch.flight_number}</p>
               <h2>{launch.mission_name}</h2>
             </div>
             <div className='launch-info'>

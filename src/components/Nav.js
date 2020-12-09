@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 import Logo from '../assets/images/spacex-logo.png';
 import Refresh from '../assets/images/refresh@3x.png';
 
-const Nav = () => {
+const Nav = ({ setLaunches, setLoading }) => {
+  const API = 'https://api.spacexdata.com/v3/launches';
+
+  const getNewData = async () => {
+    setLoading(true);
+    const result = await axios.get(API);
+    setLaunches(result.data);
+    console.log(result.data);
+    setLoading(false);
+  };
+
   return (
     <div className='nav-container'>
       <nav>
@@ -10,7 +21,7 @@ const Nav = () => {
           <img src={Logo} alt='SpaceX Logo' />
           <span>Launches</span>
         </div>
-        <div className='reload-btn'>
+        <div className='reload-btn' onClick={getNewData}>
           Reload Data
           <span>
             {' '}

@@ -1,7 +1,8 @@
+import React from 'react';
 import Nav from './components/Nav';
 import LaunchesScreen from './screens/LaunchesScreen';
 
-function App() {
+const App = () => {
   return (
     <>
       <main>
@@ -10,6 +11,6 @@ function App() {
       </main>
     </>
   );
-}
+};
 
 export default App;

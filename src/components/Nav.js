@@ -10,13 +10,13 @@ const Nav = () => {
           <img src={Logo} alt='SpaceX Logo' />
           <span>Launches</span>
         </div>
-        <a href='#'>
+        <div className='reload-btn'>
           Reload Data
           <span>
             {' '}
             <img src={Refresh} alt='refresh icon' />
           </span>
-        </a>
+        </div>
       </nav>
     </div>
   );

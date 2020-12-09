@@ -32,7 +32,7 @@ const Launch = ({ launches, setLaunches }) => {
             </span>
           </div>
           <div onClick={sortbyDate}>
-            <p>Sort Descending</p>{' '}
+            <p>{order ? 'Sort Ascending' : 'Sort Descending'}</p>{' '}
             <span>
               <img src={Sort} alt='' />{' '}
             </span>

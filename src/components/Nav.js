@@ -1,5 +1,4 @@
 import React from 'react';
-import '../assets/styles/nav.scss';
 import Logo from '../assets/images/spacex-logo.png';
 import Refresh from '../assets/images/refresh@3x.png';
 

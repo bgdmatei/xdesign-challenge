@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Launch from '../components/Launch';
 import LaunchHome from '../assets/images/launch-home@3x.png';
-import '../assets/styles/launches.scss';
 
 const LaunchesScreen = () => {
   const [launches, setLaunches] = useState([]);
@@ -10,13 +9,11 @@ const LaunchesScreen = () => {
   const API = 'https://api.spacexdata.com/v3/launches';
 
   useEffect(() => {
-    axios
-      .get(API)
-      .then((res) => {
-        console.log(res);
-        setLaunches(res.data);
-      })
-      .catch((error) => console.log(error.message));
+    const fetchData = async () => {
+      const result = await axios.get(API);
+      setLaunches(result.data);
+    };
+    fetchData();
   }, []);
 
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import '../assets/styles/launch.scss';
 import Select from '../assets/images/select@2x.png';
 import Sort from '../assets/images/sort@2x.png';
 

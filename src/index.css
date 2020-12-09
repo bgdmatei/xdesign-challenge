@@ -1,9 +1,0 @@
-@font-face {
-  font-family: 'BrandonGrotesque';
-  src: url('./assets/fonts/BrandonGrotesque-Regular.woff');
-}
-
-body {
-  margin: 0;
-  font-family: BrandonGrotesque;
-}

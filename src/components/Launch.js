@@ -25,16 +25,15 @@ const Launch = ({ launches, setLaunches }) => {
       <div className='launch-list'>
         <div className='filter-btns'>
           <div>
-            <p>Filter by Year</p>{' '}
+            Filter by Year
             <span>
-              {' '}
-              <img src={Select} alt='' />{' '}
+              <img src={Select} alt='selectIcon' />
             </span>
           </div>
-          <div onClick={sortbyDate}>
-            <p>{order ? 'Sort Ascending' : 'Sort Descending'}</p>{' '}
+          <div onClick={sortbyDate} className='sort-btn'>
+            {order ? 'Sort Ascending' : 'Sort Descending'}
             <span>
-              <img src={Sort} alt='' />{' '}
+              <img src={Sort} alt='sortIcon' />
             </span>
           </div>
         </div>

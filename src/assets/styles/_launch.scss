@@ -25,6 +25,9 @@
 .filter-btns {
   display: flex;
   justify-content: flex-end;
+  .sort-btn {
+    width: 20%;
+  }
   div {
     display: flex;
     font-size: 14px;

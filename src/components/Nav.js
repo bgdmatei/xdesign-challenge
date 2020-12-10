@@ -24,7 +24,7 @@ const Nav = ({ setLaunches, setLoading }) => {
           Reload Data
           <span>
             {' '}
-            <img src={Refresh} alt='refresh icon' />
+            <img src={Refresh} alt='refreshIcon' />
           </span>
         </div>
       </nav>

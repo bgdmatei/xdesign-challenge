@@ -24,7 +24,7 @@ const LaunchesScreen = ({ launches, setLaunches, loading, setLoading }) => {
       ) : (
         <section className='launches'>
           <div className='launches-info'>
-            <img src={LaunchHome} alt='Rocket launching' />
+            <img src={LaunchHome} alt='Rocket launch' />
             <Launch launches={launches} setLaunches={setLaunches} />
           </div>
         </section>

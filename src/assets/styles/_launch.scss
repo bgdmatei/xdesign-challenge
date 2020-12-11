@@ -28,6 +28,10 @@
   .sort-btn {
     width: 20%;
   }
+  .filter-btn {
+    position: relative;
+  }
+
   div {
     display: flex;
     font-size: 14px;
@@ -38,12 +42,82 @@
     background-color: $primary;
     cursor: pointer;
     transition: 0.3s all;
-    &:hover {
-      background-color: $hover;
-    }
     img {
       margin: 2px 0px 0px 10px;
       width: 12px;
     }
+  }
+}
+
+.filter-options {
+  position: absolute;
+  top: 28px;
+  left: -8px;
+  width: 100%;
+  justify-content: center;
+  border-top: 1px solid #fff;
+  height: 0;
+  transform: translateY(-100%);
+  z-index: -1;
+  animation: hide 0.5s ease-in;
+  ul {
+    width: 100%;
+  }
+  li {
+    transition: 0.3s all;
+    text-align: center;
+    list-style: none;
+    margin: 6px;
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.filter-options-open {
+  position: absolute;
+  top: 32px;
+  left: -8px;
+  width: 100%;
+  justify-content: center;
+  border-top: 1px solid #fff;
+  animation: drop 0.5s ease-in-out;
+  ul {
+    width: 100%;
+  }
+  li {
+    transition: 0.3s all;
+    text-align: center;
+    list-style: none;
+    margin: 6px;
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.3s;
+    }
+  }
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

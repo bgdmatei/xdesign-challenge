@@ -1,41 +1,28 @@
 import React, { useState } from 'react';
 import moment from 'moment';
-import Select from '../assets/images/select@2x.png';
-import Sort from '../assets/images/sort@2x.png';
+import Filter from './Filter';
+import Sort from './Sort';
 
 const Launch = ({ launches, setLaunches }) => {
-  const [order, setOrder] = useState(false);
-  const [sortedLaunches, setSortedLaunches] = useState([]);
+  const [onLaunchYearChange, setOnLaunchYearChange] = useState('');
 
-  const sortbyDate = () => {
-    const reversedLaunches = [...launches].reverse();
-    let reversedSort = [];
-
-    if (sortedLaunches.length) {
-      reversedSort = sortedLaunches.reverse();
-    }
-
-    setLaunches(reversedLaunches);
-    setSortedLaunches(reversedSort);
-    setOrder(!order);
+  const results = (year) => {
+    setOnLaunchYearChange(
+      launches.filter((launch) => launch.launch_year.includes(year))
+    );
   };
 
   return (
     <>
       <div className='launch-list'>
         <div className='filter-btns'>
-          <div>
-            Filter by Year
-            <span>
-              <img src={Select} alt='selectIcon' />
-            </span>
-          </div>
-          <div onClick={sortbyDate} className='sort-btn'>
-            {order ? 'Sort Ascending' : 'Sort Descending'}
-            <span>
-              <img src={Sort} alt='sortIcon' />
-            </span>
-          </div>
+          <Filter
+            launches={launches}
+            onLaunchYearChange={(year) => {
+              setLaunches(results(year));
+            }}
+          />
+          <Sort launches={launches} setLaunches={setLaunches} />
         </div>
         {launches.map((launch, i) => (
           <div className='launch-item' key={i}>

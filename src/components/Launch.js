@@ -1,27 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import moment from 'moment';
 import Filter from './Filter';
 import Sort from './Sort';
 
-const Launch = ({ launches, setLaunches }) => {
-  const [onLaunchYearChange, setOnLaunchYearChange] = useState('');
-
-  const results = (year) => {
-    setOnLaunchYearChange(
-      launches.filter((launch) => launch.launch_year.includes(year))
-    );
-  };
-
+const Launch = ({ launches, setLaunches, onYearChange, filteredLaunches }) => {
   return (
     <>
       <div className='launch-list'>
         <div className='filter-btns'>
-          <Filter
-            launches={launches}
-            onLaunchYearChange={(year) => {
-              setLaunches(results(year));
-            }}
-          />
+          <Filter launches={launches} onYearChange={onYearChange} />
           <Sort launches={launches} setLaunches={setLaunches} />
         </div>
         {launches.map((launch, i) => (

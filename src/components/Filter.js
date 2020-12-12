@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import selectIcon from '../assets/images/select@2x.png';
 
-const Filter = ({ launches, onLaunchYearChange }) => {
+const Filter = ({ launches, onYearChange }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -10,7 +10,7 @@ const Filter = ({ launches, onLaunchYearChange }) => {
 
   const handleSelect = (e) => {
     const value = e.target.textContent;
-    onLaunchYearChange(value);
+    onYearChange(value);
   };
 
   const years = [...new Set(launches.map((launch) => launch.launch_year))];

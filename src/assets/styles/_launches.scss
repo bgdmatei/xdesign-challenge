@@ -2,13 +2,13 @@
   display: grid;
   min-height: 90vh;
   grid-template-columns: 5% 1fr 1fr 5%;
-  margin-top: 5%;
+  margin-top: 24px;
   > img {
     justify-self: center;
-    width: calc(30px + 60vh);
+    width: 85%;
     grid-column: 2/3;
     position: sticky;
-    top: 10%;
+    top: 1%;
     margin-top: 10%;
   }
 }

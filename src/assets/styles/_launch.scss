@@ -27,21 +27,20 @@
   justify-content: flex-end;
   position: relative;
   button {
+    width: 18%;
     font-size: 14px;
-    font-family: BrandonGrotesque;
     font-weight: bold;
     color: #fff;
     margin: 8px;
     padding: 8px 8px;
     background-color: #1f5184;
-    cursor: pointer;
     transition: 0.3s all;
+    cursor: pointer;
     border: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     img {
-      margin: 2px 0px 0px 10px;
       width: 12px;
     }
     &:hover {

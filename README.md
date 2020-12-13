@@ -1,3 +1,17 @@
+## Usage
+### Install Dependencies 
+```
+npm install
+```
+### Run
+```
+npm start
+```
+## Build & Deploy
+```
+npm run build
+```
+
 # Tech Test
 
 Your task is to create a React application that will consume data from the SpaceX public API. The application must retrieve historic and future SpaceX launches and present them in a list view.

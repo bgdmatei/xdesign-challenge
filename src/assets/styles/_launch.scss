@@ -22,7 +22,7 @@
   }
 }
 
-.filter-btns {
+.filter-sort-btns {
   display: flex;
   justify-content: flex-end;
   position: relative;
@@ -52,8 +52,8 @@
 .filter-options-open {
   position: absolute;
   top: 100%;
-  left: 66%;
-  width: 15%;
+  left: 61%;
+  width: 18%;
   justify-content: center;
   background-color: $primary;
   animation: drop 0.5s ease-in-out;

@@ -14,7 +14,7 @@ const API = 'https://api.spacexdata.com/v3/launches';
 const sortOrder = { asc: 'asc', desc: 'desc' };
 
 const filterLaunches = (launches, filter) => {
-  const hasYearFilter = !!filter.year;
+  const hasYearFilter = filter.year !== null;
   const isAscending = filter.order === sortOrder.asc;
 
   const filteredLaunches = hasYearFilter
@@ -57,7 +57,7 @@ const LaunchesScreen = ({ launches, setLaunches, loading, setLoading }) => {
       {loading ? (
         <Loader />
       ) : (
-        <section className='launches'>
+        <section>
           <div className='launches-info'>
             <img
               src={launchHome}
@@ -65,7 +65,7 @@ const LaunchesScreen = ({ launches, setLaunches, loading, setLoading }) => {
               alt='Rocket launch'
             />
             <div className='launch-list'>
-              <div className='filter-btns'>
+              <div className='filter-sort-btns'>
                 <Filter launches={launches} onYearChange={onYearChange} />
                 <button
                   type='button'

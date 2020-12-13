@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import selectIcon from '../assets/images/select@2x.png';
+import select from '../assets/images/select.png';
+import select2x from '../assets/images/select@2x.png';
+import select3x from '../assets/images/select@3x.png';
 
-const Filter = ({ launches, onYearChange }) => {
+const Filter = ({ onYearChange, launches }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -11,27 +13,35 @@ const Filter = ({ launches, onYearChange }) => {
   const handleSelect = (e) => {
     const value = e.target.textContent;
     onYearChange(value);
+    setOpen(!open);
   };
 
-  const years = [...new Set(launches.map((launch) => launch.launch_year))];
+  const years = [
+    'All',
+    ...new Set(launches.map((launch) => launch.launch_year)),
+  ];
 
   return (
     <>
-      <div className='filter-btn' onClick={handleOpen}>
+      <button className='filter-btn' onClick={handleOpen}>
         Filter by Year
         <span>
-          <img src={selectIcon} alt='selectIcon' />
+          <img
+            src={select}
+            srcSet={`${select} 300w, ${select2x} 768w, ${select3x} 1240w`}
+            alt='selectIcon'
+          />
         </span>
-        <div className={open ? 'filter-options-open' : 'filter-options'}>
-          <ul>
-            {years.map((year) => (
-              <li onClick={handleSelect} key={year}>
-                {year}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      </button>
+      {open && (
+        <ul className='filter-options-open'>
+          {years.map((year) => (
+            <li onClick={handleSelect} key={year}>
+              {year}
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 };

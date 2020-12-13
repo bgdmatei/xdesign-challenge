@@ -5,9 +5,10 @@
   margin-top: 5%;
   > img {
     justify-self: center;
-    width: 60%;
+    width: calc(30px + 60vh);
     grid-column: 2/3;
     position: sticky;
     top: 10%;
+    margin-top: 10%;
   }
 }

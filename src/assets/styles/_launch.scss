@@ -25,92 +25,54 @@
 .filter-btns {
   display: flex;
   justify-content: flex-end;
-  .sort-btn {
-    width: 20%;
-  }
-  .filter-btn {
-    position: relative;
-  }
-
-  div {
-    display: flex;
+  position: relative;
+  button {
     font-size: 14px;
+    font-family: BrandonGrotesque;
     font-weight: bold;
     color: #fff;
     margin: 8px;
-    padding: 8px 16px;
-    background-color: $primary;
+    padding: 8px 8px;
+    background-color: #1f5184;
     cursor: pointer;
     transition: 0.3s all;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       margin: 2px 0px 0px 10px;
       width: 12px;
     }
-  }
-}
-
-.filter-options {
-  position: absolute;
-  top: 28px;
-  left: -8px;
-  width: 100%;
-  justify-content: center;
-  border-top: 1px solid #fff;
-  height: 0;
-  transform: translateY(-100%);
-  z-index: -1;
-  animation: hide 0.5s ease-in;
-  ul {
-    width: 100%;
-  }
-  li {
-    transition: 0.3s all;
-    text-align: center;
-    list-style: none;
-    margin: 6px;
     &:hover {
-      transform: scale(1.2);
-      transition: all 0.2s ease-in-out;
+      background-color: $hover;
     }
   }
 }
 
 .filter-options-open {
   position: absolute;
-  top: 32px;
-  left: -8px;
-  width: 100%;
+  top: 100%;
+  left: 66%;
+  width: 15%;
   justify-content: center;
-  border-top: 1px solid #fff;
+  background-color: $primary;
   animation: drop 0.5s ease-in-out;
-  ul {
-    width: 100%;
-  }
+  cursor: pointer;
   li {
+    color: #fff;
     transition: 0.3s all;
     text-align: center;
     list-style: none;
     margin: 6px;
     &:hover {
-      transform: scale(1.2);
-      transition: all 0.3s;
+      background-color: #fff;
+      color: $primary;
     }
   }
 }
 
 @keyframes drop {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes hide {
   0% {
     opacity: 0;
   }
